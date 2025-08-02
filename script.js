@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = document.createElement('li');
             // Set the text content of the list item to the task text.
             li.textContent = taskText;
+            li.classList.add('task-items');
 
             // Create a new button element for removing the task.
             const removeButton = document.createElement('button');
