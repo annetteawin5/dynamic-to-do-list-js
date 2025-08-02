@@ -1,5 +1,5 @@
 // This event listener ensures the script runs after the entire HTML document is fully loaded.
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
     // Select DOM Elements and store them in constants.
     // This improves performance and code readability.
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskList = document.getElementById('task-list');
 
     // Define a function to add a new task to the list.
-    const addTask = () => {
+    function addTask()  {
         // Retrieve and trim the value from the task input field.
         const taskText = taskInput.value.trim();
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach a keypress event listener to the task input field.
     // This allows tasks to be added by pressing the "Enter" key.
-    taskInput.addEventListener('keypress', (event) => {
+    taskInput.addEventListener('keypress',function (event)  {
         // Check if the pressed key is "Enter".
         if (event.key === 'Enter') {
             // If it is, call the addTask function.
